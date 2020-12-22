@@ -8,38 +8,55 @@ html{
   background-position: center;
 }
 
-/*body{
-  width: 896px;
-  height: 720px;
-  margin: 50 auto;
+MessageText{
+  font-size: 30px;
+  color: white;
+  background: linear-gradient(#2F64D6, #3040BA);
+  display: flex;
+  border-style: solid;
+  border-radius: 30px;
+  height: 200px;
+  width: 600px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
   position: relative;
-  background-color: black;
-  opacity: 0.5;
-}*/
+  top: 100px;
+}
+
 
 ennemies{
   margin: 0 auto;
   position: relative;
-  height: 1121px;
+  height: 600px;
   width: 1255px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-MessageText{
-  font-size: 30px;
-  color: white;
-  background-color: blue;
+CharaStats{
   display: flex;
-  border-style: double;
+}
+
+Death{
+  font-size: 25px;
+  color: white;
+  background: linear-gradient(#E03B24, #E03B86);
+  display: flex;
+  border-style: solid;
+  border-radius: 30px;
+  height: 70px;
+  width: 275px;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   position: relative;
-  height: 400px;
-  width: 600px;
-  align-items: center;
-  justify-content: space-evenly;
+  top: 100px;
 }
+
+
+
 
 
 
