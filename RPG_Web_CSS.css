@@ -37,22 +37,69 @@ ennemies{
 
 CharaStats{
   display: flex;
+  align-items: center;
+  width: 1255px;
 }
 
 Death{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   font-size: 25px;
   color: white;
-  background: linear-gradient(#E03B24, #E03B86);
-  display: flex;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 35px;
+  background: linear-gradient(#E07C7C, #BF3834);
   border-style: solid;
   border-radius: 30px;
-  height: 70px;
+  height: 80px;
   width: 275px;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  position: relative;
-  top: 100px;
+}
+Bob{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 35px;
+  background: linear-gradient(#E07C7C, #BF3834);
+  border-style: solid;
+  border-radius: 30px;
+  height: 80px;
+  width: 275px;
+}
+Satan{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 35px;
+  background: linear-gradient(#E07C7C, #BF3834);
+  border-style: solid;
+  border-radius: 30px;
+  height: 80px;
+  width: 275px;
+}
+Belzebub{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 35px;
+  background: linear-gradient(#E07C7C, #BF3834);
+  border-style: solid;
+  border-radius: 30px;
+  height: 80px;
+  width: 275px;
 }
 
 
