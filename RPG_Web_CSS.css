@@ -22,15 +22,16 @@ MessageText{
   justify-content: center;
   margin: 0 auto;
   position: relative;
-  top: 100px;
+  bottom: -200px;
 }
 
 
 ennemies{
   margin: 0 auto;
   position: relative;
-  height: 600px;
+  height: 96px;
   width: 1255px;
+  bottom: -378px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -100,14 +101,12 @@ Belzebub{
 CharaStats{
   margin: 0 auto;
   position: relative;
-  height: 300px;
+  height: 314px;
   width: 1255px;
   display: flex;
   align-items: flex-end;
-  justify-content: space-evenly;
-  background-color: black;
-  opacity: 0.5;
-  bottom: 160px;
+  justify-content: space-between;
+  bottom: -420px;
 }
 
 
