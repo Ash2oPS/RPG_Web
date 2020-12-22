@@ -1,23 +1,17 @@
 .lw { font-size: 60px; }
 
-body{
+html{
+  height: 100vh;
   background-color:  #1D253D;
   background-image: url("https://zupimages.net/up/20/52/7s7z.png");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 
-section1{
-  font-size: 20;
-  display: flex;
-  border:  2px solid white;
-  border-radius: 10px;
-  color: white;
-  background-color: #2F3773;
-  align-items: center;
-}
-
 ennemies{
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
