@@ -1,6 +1,10 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
-{\fonttbl}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+.InfoGob{
+    transform: scale(0);
+    Background-color: white;
+    border-radius: 8px;
+    font-family:  Andale Mono, monospace;
+    transition: 0.2s;
+}
+.gobelin:hover > .infoGob{
+    transform: scale(1);
 }
