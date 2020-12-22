@@ -38,7 +38,7 @@ ennemies{
   justify-content: space-evenly;
 }
 
-Lucifer{
+LuciferTXT{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -54,7 +54,7 @@ Lucifer{
   height: 80px;
   width: 275px;
 }
-Bob{
+SatanTXT{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -70,7 +70,7 @@ Bob{
   height: 80px;
   width: 275px;
 }
-Satan{
+BelzebuthTXT{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -86,7 +86,7 @@ Satan{
   height: 80px;
   width: 275px;
 }
-Belzebub{
+BobTXT{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -101,7 +101,6 @@ Belzebub{
   border-color: black;
   height: 80px;
   width: 275px;
-  
 }
 
 CharaStats{
