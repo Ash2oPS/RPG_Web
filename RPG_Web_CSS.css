@@ -6,6 +6,7 @@ html{
   background-image: url("https://zupimages.net/up/20/52/7s7z.png");
   background-repeat: no-repeat;
   background-position: center;
+  overflow-y: hidden;
 }
 
 MessageText{
@@ -33,12 +34,6 @@ ennemies{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-}
-
-CharaStats{
-  display: flex;
-  align-items: center;
-  width: 1255px;
 }
 
 Death{
@@ -102,7 +97,18 @@ Belzebub{
   width: 275px;
 }
 
-
+CharaStats{
+  margin: 0 auto;
+  position: relative;
+  height: 300px;
+  width: 1255px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  background-color: black;
+  opacity: 0.5;
+  bottom: 160px;
+}
 
 
 
