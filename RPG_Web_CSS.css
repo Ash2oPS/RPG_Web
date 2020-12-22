@@ -1,0 +1,21 @@
+.lw { font-size: 60px; }
+body{
+  background-image: url("https://zupimages.net/up/20/52/k6ib.png");
+  background-repeat: no-repeat;
+  background-size: 100%, auto; 
+}
+
+
+section1{
+  font-size: 20;
+  display: flex;
+  border:  2px solid white;
+  border-radius: 10px;
+  color: white;
+  background-color: #2F3773;
+  align-items: center;
+}
+
+ennemies{
+  
+}
