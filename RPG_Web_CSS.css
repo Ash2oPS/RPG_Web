@@ -4,14 +4,27 @@ html{
   height: 100vh;
   background-color:  #1D253D;
   background-image: url("https://zupimages.net/up/20/52/7s7z.png");
-  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
 }
 
+/*body{
+  width: 896px;
+  height: 720px;
+  margin: 50 auto;
+  position: relative;
+  background-color: black;
+  opacity: 0.5;
+}*/
 
 ennemies{
+  margin: 0 auto;
+  position: relative;
+  height: 1008px;
+  width: 1255px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-evenly;
+  /*background-color: blue;
+  opacity: 0.5;*/
 }
