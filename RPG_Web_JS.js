@@ -65,7 +65,12 @@ var BelzeTurn = false;
 var BobTurn = false;
 
 if (LuciferTurn == true){
+  LuciferTXT.style.height = "314px";
+  LuciferTXT.style.background= "linear-gradient(#FA8F98, #FA8C78)"
   
+} else{
+    LuciferTXT.style.height = "80px";
+  LuciferTXT.style.background= "linear-gradient(#9D7BC2, #5A5991)"
 }
 
 
