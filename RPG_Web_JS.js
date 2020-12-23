@@ -16,6 +16,14 @@ var MPSatan = MaxMPSatan;
 var MPBelze = MaxMPBelze;
 var MPBob = MaxMPBob;
 
+var LuciferDead = false;
+var SatanDead = false;
+var BelzeDead = false;
+var BobDead = false;
+var EnnemyLDead = false;
+var EnnemyMDead = false;
+var EnnemyRDead = false;
+
 var ATKLucifer = 1450;
 var ATKSatan = 320;
 var ATKBelze = 2600;
@@ -67,6 +75,24 @@ var LuciferTXTATK = document.getElementById("LuciferTXTATK");
 var LuciferTXTDEF = document.getElementById("LuciferTXTDEF");
 var LuciferTXTSP = document.getElementById("LuciferTXTSP");
 
+var SatanTXTNom = document.getElementById("SatanTXTNom");
+var SatanTXTStats = document.getElementById("SatanTXTStats");
+var SatanTXTATK = document.getElementById("SatanTXTATK");
+var SatanTXTDEF = document.getElementById("SatanTXTDEF");
+var SatanTXTSP = document.getElementById("SatanTXTSP");
+
+var BelzeTXTNom = document.getElementById("BelzebuthTXTNom");
+var BelzeTXTStats = document.getElementById("BelzebuthTXTStats");
+var BelzeTXTATK = document.getElementById("BelzebuthTXTATK");
+var BelzeTXTDEF = document.getElementById("BelzebuthTXTDEF");
+var BelzeTXTSP = document.getElementById("BelzebuthTXTSP");
+
+var BobTXTNom = document.getElementById("BobTXTNom");
+var BobTXTStats = document.getElementById("BobTXTStats");
+var BobTXTATK = document.getElementById("BobTXTATK");
+var BobTXTDEF = document.getElementById("BobTXTDEF");
+var BobTXTSP = document.getElementById("BobTXTSP");
+
 
 TextBox.innerHTML = "Des Villageois sauvages apparaissent !";
 
@@ -79,83 +105,134 @@ var BobTurn = false;
 if (LuciferTurn == true) {
     LuciferTXT.style.height = "314px";
     LuciferTXT.style.background = "linear-gradient(#FA8F98, #FA8C78)";
-    LuciferTXT.innerHTML = "<b>LUCIFER</b>";
-    LuciferTXT.innerHTML += "<b>" + HPLucifer + " / " + MaxHPLucifer + " PV</b>";
-    LuciferTXT.innerHTML += "<b>" + MPLucifer + " / " + MaxMPLucifer + " PM</b>";
-    LuciferTXT.innerHTML += "<br>";
-    LuciferTXT.innerHTML += "<b> ATTAQUER </b>";
-    LuciferTXT.innerHTML += "<b> SE DEFENDRE </b>";
-    LuciferTXT.innerHTML += "<b> VENT D'EDEN </b>";
+    LuciferTXTNom.innerHTML = "<b>LUCIFER</b>";
+    LuciferTXTStats.innerHTML = "<b>" + HPLucifer + " / " + MaxHPLucifer + " PV</b>";
+    LuciferTXTStats.innerHTML += "<b>" + MPLucifer + " / " + MaxMPLucifer + " PM</b>";
+    LuciferTXTATK.innerHTML = "ATTAQUER";
+    LuciferTXTDEF.innerHTML = "<b> SE DEFENDRE </b>";
+    LuciferTXTSP.innerHTML = "<b> VENT D'EDEN </b>";
 } else {
     LuciferTXT.style.height = "80px";
     LuciferTXT.style.background = "linear-gradient(#9D7BC2, #5A5991)";
     LuciferTXT.innerHTML = "<b>LUCIFER</b>";
-    LuciferTXT.innerHTML += "PV : " + HPLucifer;
-    LuciferTXT.innerHTML += " PM : " + MPLucifer;
+    LuciferTXTStats.innerHTML = "PV : " + HPLucifer;
+    LuciferTXTStats.innerHTML += " PM : " + MPLucifer;
+    LuciferTXTATK.innerHTML = "";
+    LuciferTXTDEF.innerHTML = "";
+    LuciferTXTSP.innerHTML = "";
 }
 
 //TOUR DE SATAN
 if (SatanTurn == true) {
     SatanTXT.style.height = "314px";
     SatanTXT.style.background = "linear-gradient(#FA8F98, #FA8C78)";
-    SatanTXT.innerHTML = "<b>SATAN</b>";
-    SatanTXT.innerHTML += "<b>" + HPSatan + " / " + MaxHPSatan + " PV</b>";
-    SatanTXT.innerHTML += "<b>" + MPSatan + " / " + MaxMPSatan + " PM</b>";
-    SatanTXT.innerHTML += "<br>";
-    SatanTXT.innerHTML += "<b> ATTAQUER </b>";
-    SatanTXT.innerHTML += "<b> SE DEFENDRE </b>";
-    SatanTXT.innerHTML += "<b> ENFER CUISANT </b>";
+    SatanTXTNom.innerHTML = "<b>SATAN</b>";
+    SatanTXTStats.innerHTML = "<b>" + HPSatan + " / " + MaxHPSatan + " PV</b>";
+    SatanTXTStats.innerHTML += "<b>" + MPSatan + " / " + MaxMPSatan + " PM</b>";
+    SatanTXTATK.innerHTML = "<b> ATTAQUER </b>";
+    SatanTXTDEF.innerHTML = "<b> SE DEFENDRE </b>";
+    SatanTXTSP.innerHTML = "<b> ENFER CUISANT </b>";
 } else {
     SatanTXT.style.height = "80px";
     SatanTXT.style.background = "linear-gradient(#9D7BC2, #5A5991)";
     SatanTXT.innerHTML = "<b>SATAN</b>";
-    SatanTXT.innerHTML += "PV : " + HPSatan;
-    SatanTXT.innerHTML += " PM : " + MPSatan;
+    SatanTXTStats.innerHTML = "PV : " + HPSatan;
+    SatanTXTStats.innerHTML += " PM : " + MPSatan;
+    SatanTXTATK.innerHTML = "";
+    SatanTXTDEF.innerHTML = "";
+    SatanTXTSP.innerHTML = "";
 }
+
 //TOUR DE BELZEBUTH
 if (BelzeTurn == true) {
     BelzeTXT.style.height = "314px";
     BelzeTXT.style.background = "linear-gradient(#FA8F98, #FA8C78)";
-    BelzeTXT.innerHTML = "<b>BELZEBUTH</b>";
-    BelzeTXT.innerHTML += "<b>" + HPBelze + " / " + MaxHPBelze + " PV</b>";
-    BelzeTXT.innerHTML += "<b>" + MPBelze + " / " + MaxMPBelze + " PM</b>";
-    BelzeTXT.innerHTML += "<br>";
-    BelzeTXT.innerHTML += "<b> ATTAQUER </b>";
-    BelzeTXT.innerHTML += "<b> SE DEFENDRE </b>";
-    BelzeTXT.innerHTML += "<b> SACRIFICE DIABOLIQUE </b>";
+    BelzeTXTNom.innerHTML = "<b>BELZEBUTH</b>";
+    BelzeTXTStats.innerHTML = "<b>" + HPBelze + " / " + MaxHPBelze + " PV</b>";
+    BelzeTXTStats.innerHTML += "<b>" + MPBelze + " / " + MaxMPBelze + " PM</b>";
+    BelzeTXTATK.innerHTML = "<b> ATTAQUER </b>";
+    BelzeTXTDEF.innerHTML = "<b> SE DEFENDRE </b>";
+    BelzeTXTSP.innerHTML = "<b> SACRIFICE DEMONIAQUE </b>";
 } else {
     BelzeTXT.style.height = "80px";
     BelzeTXT.style.background = "linear-gradient(#9D7BC2, #5A5991)";
     BelzeTXT.innerHTML = "<b>BELZEBUTH</b>";
-    BelzeTXT.innerHTML += "PV : " + HPBelze;
-    BelzeTXT.innerHTML += " PM : " + MPBelze;
+    BelzeTXTStats.innerHTML = "PV : " + HPBelze;
+    BelzeTXTStats.innerHTML += " PM : " + MPBelze;
+    BelzeTXTTATK.innerHTML = "";
+    BelzeTXTDEF.innerHTML = "";
+    BelzeTXTSP.innerHTML = "";
 }
 
 //TOUR DE BOB
 if (BobTurn == true) {
     BobTXT.style.height = "314px";
     BobTXT.style.background = "linear-gradient(#FA8F98, #FA8C78)";
-    BobTXT.innerHTML = "<b>BOB</b>";
-    BobTXT.innerHTML += "<b>" + HPBob + " / " + MaxHPBob + " PV</b>";
-    BobTXT.innerHTML += "<b>" + MPBob + " / " + MaxMPBob + " PM</b>";
-    BobTXT.innerHTML += "<br>";
-    BobTXT.innerHTML += "<b> ATTAQUER </b>";
-    BobTXT.innerHTML += "<b> SE DEFENDRE </b>";
-    BobTXT.innerHTML += "<b> GUILI-GUILI </b>";
+    BobTXTNom.innerHTML = "<b>BOB</b>";
+    BobTXTStats.innerHTML = "<b>" + HPBob + " / " + MaxHPBob + " PV</b>";
+    BobTXTStats.innerHTML += "<b>" + MPBob + " / " + MaxMPBob + " PM</b>";
+    BobTXTATK.innerHTML = "<b> ATTAQUER </b>";
+    BobTXTDEF.innerHTML = "<b> SE DEFENDRE </b>";
+    BobTXTSP.innerHTML = "<b> GUILI-GUILI </b>";
 } else {
     BobTXT.style.height = "80px";
     BobTXT.style.background = "linear-gradient(#9D7BC2, #5A5991)";
     BobTXT.innerHTML = "<b>BOB</b>";
-    BobTXT.innerHTML += "PV : " + HPBob;
-    BobTXT.innerHTML += " PM : " + MPBob;
+    BobTXTStats.innerHTML = "PV : " + HPBob;
+    BobTXTStats.innerHTML += " PM : " + MPBob;
+    BobTXTATK.innerHTML = "";
+    BobTXTDEF.innerHTML = "";
+    BobTXTSP.innerHTML = "";
 }
 
+LuciferTXTATK.addEventListener("click", atk_Lucifer());
 
+function atk_Lucifer(){
+    LuciferTXT.style.opacity = "0.2";
+}
+
+if(HPLucifer <= 0){
+    LuciferDead = true;
+}
+if(HPSatan <= 0){
+    SatanDead = true;
+}
+if(HPBelze <= 0){
+    BelzeDead = true;
+}
+if(HPBob <= 0){
+    BobDead = true;
+}
+if(HPEnnemyL <= 0){
+    EnnemyLDead = true;
+}
+if(HPEnnemyM <= 0){
+    EnnemyMDead = true;
+}
+if(HPEnnemyR <= 0){
+    EnnemyRDead = true;
+}
+
+if (LuciferDead && SatanDead && BelzeDead && BobDead){
+    GameOver();
+}
+
+if (EnnemyLDead && EnnemyMDead && EnnemyRDead){
+    Victory();
+}
+
+function GameOver(){
+    TextBox.innerHTML = "Vous avez perdu. Vous avez déçu le Tout-Puissant (la honte, quoi ?)."
+}
+
+function Victory(){
+    TextBox.innerHTML = "Bravo, vous avez tué trois mortel. Y a-t'il cependant vraiment de quoi être fier ? "
+}
 
 //SPECIALES : 
-//LUCIFER - VENT D'EDEN : Soigne le coéquipier le plus affaibli
-//SATAN - ENFER CUISANT : Brûle tous les adversaires
-//BELZE - SACRIFICE DIABOLIQUE : Tue un coéquipier aléatoire afin de booster Belze
-//BOB - GUILI-GUILI : Chatouille un adversaire. Ce dernier rigole bien et passe donc une bonne journée
+//LUCIFER - VENT D'EDEN : Soigne le coéquipier le plus affaibli.
+//SATAN - ENFER CUISANT : Brûle tous les adversaires.
+//BELZE - SACRIFICE DIABOLIQUE : Tue un coéquipier aléatoire afin de booster Belze.
+//BOB - GUILI-GUILI : Chatouille un adversaire. Ce dernier rigole bien et passe donc une bonne journée.
 
 
