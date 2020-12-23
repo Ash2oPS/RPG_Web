@@ -31,6 +31,11 @@ var DEFSatan = 920;
 var ATKBelze = 1940;
 var ATKBob = 6;
 
+var LastActionLucifer = 0;
+var LastActionSatan = 0;
+var LastActionBelze = 0;
+var LastActionBob = 0;
+
 var MaxHPEnnemyL = 17000;
 var MaxHPEnnemyM = 16000;
 var MaxHPEnnemyR = 19000;
@@ -53,10 +58,10 @@ var SPDEFEnnemyR = 124;
 var TextBox = document.getElementById("MessageText");
 var LuciferTXT = document.getElementById("LuciferTXT");
 var SatanTXT = document.getElementById("SatanTXT");
-var BelzeTXT = document.getElementById("BezebuthTXT");
+var BelzeTXT = document.getElementById("BelzebuthTXT");
+var BobTXT = document.getElementById("BobTXT");
 var BobTXT = document.getElementById("BobTXT");
 
-var EnnemyNameIndex = Math.floor(Math.random() * (11 - 0) ) + 0;
 TextBox.innerHTML = "Des Villageois sauvages apparaissent !";
 
 var LuciferTurn = true;
@@ -102,7 +107,7 @@ if (SatanTurn == true){
     SatanTXT.innerHTML += " PM : " + MPSatan;
   }
 //TOUR DE BELZEBUTH
-  if (BelzeTurn == true ){
+  if (BelzeTurn == true){
     BelzeTXT.style.height = "314px";
     BelzeTXT.style.background = "linear-gradient(#FA8F98, #FA8C78)";
     BelzeTXT.innerHTML = "<b>BELZEBUTH</b>";
@@ -113,7 +118,7 @@ if (SatanTurn == true){
     BelzeTXT.innerHTML += "<b> SE DEFENDRE </b>";
     BelzeTXT.innerHTML += "<b> SACRIFICE DIABOLIQUE </b>";
   } else{
-    BelzeTXT.style.height = "801px";
+    BelzeTXT.style.height = "80px";
     BelzeTXT.style.background= "linear-gradient(#9D7BC2, #5A5991)";
     BelzeTXT.innerHTML = "<b>BELZEBUTH</b>";
     BelzeTXT.innerHTML += "PV : " + HPBelze;
@@ -134,7 +139,7 @@ if (SatanTurn == true){
   } else{
     BobTXT.style.height = "80px";
     BobTXT.style.background= "linear-gradient(#9D7BC2, #5A5991)";
-    BobTXT.innerHTML = "<b>HJHJ</b>";
+    BobTXT.innerHTML = "<b>BOB</b>";
     BobTXT.innerHTML += "PV : " + HPBob;
     BobTXT.innerHTML += " PM : " + MPBob;
   }
