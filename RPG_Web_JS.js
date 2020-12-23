@@ -60,7 +60,13 @@ var LuciferTXT = document.getElementById("LuciferTXT");
 var SatanTXT = document.getElementById("SatanTXT");
 var BelzeTXT = document.getElementById("BelzebuthTXT");
 var BobTXT = document.getElementById("BobTXT");
-var BobTXT = document.getElementById("BobTXT");
+
+var LuciferTXTNom = document.getElementById("LuciferTXTNom");
+var LuciferTXTStats = document.getElementById("LuciferTXTStats");
+var LuciferTXTATK = document.getElementById("LuciferTXTATK");
+var LuciferTXTDEF = document.getElementById("LuciferTXTDEF");
+var LuciferTXTSP = document.getElementById("LuciferTXTSP");
+
 
 TextBox.innerHTML = "Des Villageois sauvages apparaissent !";
 
