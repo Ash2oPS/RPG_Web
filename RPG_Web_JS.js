@@ -1,14 +1,3 @@
-.InfoGob{
-    transform: scale(0);
-    Background-color: white;
-    border-radius: 8px;
-    font-family:  Andale Mono, monospace;
-    transition: 0.2s;
-}
-.gobelin:hover > .infoGob{
-    transform: scale(1);
-}
-
 var MaxHPLucifer = 4800;
 var MaxHPSatan = 2900;
 var MaxHPBelze = 8200;
@@ -62,13 +51,20 @@ var SPDEFEnnemyM = 350;
 var SPDEFEnnemyR = 124;
 
 var TextBox = document.getElementById("MessageText");
+var LuciferTXT = document.getElementById("LuciferTXT");
+var SatanTXT = document.getElementById("SatanTXT");
+var BelzeTXT = document.getElementById("BezebuthTXT");
+var BobTXT = document.getElementById("BobTXT");
 
 var EnnemyNameIndex = Math.floor(Math.random() * (11 - 0) ) + 0;
-TextBox.textContent = EnnemyNameIndex;
+TextBox.innerHTML = "Des Villageois sauvages apparaissent !";
 
-var oui = true;
+var LuciferTurn = true;
+var SatanTurn = false;
+var BelzeTurn = false;
+var BobTurn = false;
 
-if (oui == true;){
+if (LuciferTurn == true){
   
 }
 
