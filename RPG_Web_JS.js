@@ -64,14 +64,81 @@ var SatanTurn = false;
 var BelzeTurn = false;
 var BobTurn = false;
 
+//TOUR DE LUCIFER
 if (LuciferTurn == true){
   LuciferTXT.style.height = "314px";
-  LuciferTXT.style.background= "linear-gradient(#FA8F98, #FA8C78)"
-  
+  LuciferTXT.style.background = "linear-gradient(#FA8F98, #FA8C78)"
+  LuciferTXT.innerHTML = "<b>LUCIFER</b>";
+  LuciferTXT.innerHTML += "<b>" + HPLucifer + " / " + MaxHPLucifer + " PV</b>";
+  LuciferTXT.innerHTML += "<b>" + MPLucifer + " / " + MaxMPLucifer + " PM</b>";
+  LuciferTXT.innerHTML += "<br>";
+  LuciferTXT.innerHTML += "<b> ATTAQUER </b>";
+  LuciferTXT.innerHTML += "<b> SE DEFENDRE </b>";
+  LuciferTXT.innerHTML += "<b> VENT D'EDEN </b>";
 } else{
     LuciferTXT.style.height = "80px";
   LuciferTXT.style.background= "linear-gradient(#9D7BC2, #5A5991)"
+  LuciferTXT.innerHTML = "<b>LUCIFER</b>";
+  LuciferTXT.innerHTML += "PV : " + HPLucifer;
+  LuciferTXT.innerHTML += " PM : " + MPLucifer;
 }
+
+//TOUR DE SATAN
+if (SatanTurn == true){
+    SatanTXT.style.height = "314px";
+    SatanTXT.style.background = "linear-gradient(#FA8F98, #FA8C78)"
+    SatanTXT.innerHTML = "<b>SATAN</b>";
+    SatanTXT.innerHTML += "<b>" + HPSatan + " / " + MaxHPSatan + " PV</b>";
+    SatanTXT.innerHTML += "<b>" + MPSatan + " / " + MaxMPSatan + " PM</b>";
+    SatanTXT.innerHTML += "<br>";
+    SatanTXT.innerHTML += "<b> ATTAQUER </b>";
+    SatanTXT.innerHTML += "<b> SE DEFENDRE </b>";
+    SatanTXT.innerHTML += "<b> ENFER CUISANT </b>";
+  } else{
+    SatanTXT.style.height = "80px";
+    SatanTXT.style.background= "linear-gradient(#9D7BC2, #5A5991)"
+    SatanTXT.innerHTML = "<b>SATAN</b>";
+    SatanTXT.innerHTML += "PV : " + HPSatan;
+    SatanTXT.innerHTML += " PM : " + MPSatan;
+  }
+
+//TOUR DE BELZEBUTH
+  if (BelzeTurn == true){
+    BelzeTXT.style.height = "314px";
+    BelzeTXT.style.background = "linear-gradient(#FA8F98, #FA8C78)"
+    BelzeTXT.innerHTML = "<b>BELZEBUTH</b>";
+    BelzeTXT.innerHTML += "<b>" + HPBelze + " / " + MaxHPBelze + " PV</b>";
+    BelzeTXT.innerHTML += "<b>" + MPBelze + " / " + MaxMPBelze + " PM</b>";
+    Belze.innerHTML += "<br>";
+    Belze.innerHTML += "<b> ATTAQUER </b>";
+    BelzeTXT.innerHTML += "<b> SE DEFENDRE </b>";
+    BelzeTXT.innerHTML += "<b> SACRIFICE DIABOLIQUE </b>";
+  } else{
+    BelzeTXT.style.height = "80px";
+    BelzeTXT.style.background= "linear-gradient(#9D7BC2, #5A5991)"
+    BelzeTXT.innerHTML = "<b>BELZEBUTH</b>";
+    BelzeTXT.innerHTML += "PV : " + HPBelze;
+    BelzeTXT.innerHTML += " PM : " + MPBelze;
+  }
+
+//TOUR DE BOB
+  if (BobTurn == true){
+    BobTXT.style.height = "314px";
+    BobTXT.style.background = "linear-gradient(#FA8F98, #FA8C78)"
+    BobTXT.innerHTML = "<b>BOB</b>";
+    BobTXT.innerHTML += "<b>" + HPBob + " / " + MaxHPBob + " PV</b>";
+    BobTXT.innerHTML += "<b>" + MPBob + " / " + MaxMPBob + " PM</b>";
+    BobTXT.innerHTML += "<br>";
+    BobTXT.innerHTML += "<b> ATTAQUER </b>";
+    BobTXT.innerHTML += "<b> SE DEFENDRE </b>";
+    BobTXT.innerHTML += "<b> GUILI-GUILI </b>";
+  } else{
+    BobTXT.style.height = "80px";
+    BobTXT.style.background= "linear-gradient(#9D7BC2, #5A5991)"
+    BobTXT.innerHTML = "<b>HJHJ</b>";
+    BobTXT.innerHTML += "PV : " + HPBob;
+    BobTXT.innerHTML += " PM : " + MPBob;
+  }
 
 
 
