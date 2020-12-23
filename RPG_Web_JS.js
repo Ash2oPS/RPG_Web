@@ -180,7 +180,7 @@ if (BobTurn == true) {
 } else {
     BobTXT.style.height = "80px";
     BobTXT.style.background = "linear-gradient(#9D7BC2, #5A5991)";
-    BobTXT.innerHTML = "<b>BOB</b>";
+    BobTXTNom.innerHTML = "<b>BOB</b>";
     BobTXTStats.innerHTML = "PV : " + HPBob;
     BobTXTStats.innerHTML += " PM : " + MPBob;
     BobTXTATK.innerHTML = "";
@@ -271,6 +271,7 @@ if (EnnemyRTurn && EnnemyRDead){
 //LUCIFER - VENT D'EDEN : Soigne le coéquipier le plus affaibli.
 //SATAN - ENFER CUISANT : Brûle tous les adversaires.
 //BELZE - SACRIFICE DIABOLIQUE : Tue un coéquipier aléatoire afin de booster Belze.
-//BOB - GUILI-GUILI : Chatouille un adversaire. Ce dernier rigole bien et passe donc une bonne journée.
+//BOB - GUILI-GUILI : Chatouille un adversaire. Ce dernier rigole bien et passe donc une bonne journée. 
+//Si Bob est toujours en vie 4 tours plus tard, cet ennemi meurt.
 
 
