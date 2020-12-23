@@ -100,6 +100,9 @@ var LuciferTurn = true;
 var SatanTurn = false;
 var BelzeTurn = false;
 var BobTurn = false;
+var EnnemyLTurn = false;
+var EnnemyMTurn = false;
+var EnnemyRTurn = false;
 
 //TOUR DE LUCIFER
 if (LuciferTurn == true) {
@@ -191,6 +194,7 @@ function atk_Lucifer(){
     LuciferTXT.style.opacity = "0.2";
 }
 
+//GESTION DES MORTS
 if(HPLucifer <= 0){
     LuciferDead = true;
 }
@@ -213,10 +217,12 @@ if(HPEnnemyR <= 0){
     EnnemyRDead = true;
 }
 
+//PERDU
 if (LuciferDead && SatanDead && BelzeDead && BobDead){
     GameOver();
 }
 
+//GAGNE
 if (EnnemyLDead && EnnemyMDead && EnnemyRDead){
     Victory();
 }
@@ -226,8 +232,40 @@ function GameOver(){
 }
 
 function Victory(){
-    TextBox.innerHTML = "Bravo, vous avez tué trois mortel. Y a-t'il cependant vraiment de quoi être fier ? "
+    TextBox.innerHTML = "Bravo, vous avez tué trois mortels. Y a-t'il cependant vraiment de quoi être fier ? "
 }
+
+//SI UN PERSO EST MORT, IL N'AGIT PAS
+if (LuciferTurn && LuciferDead){
+    LuciferTurn = False;
+    SatanTurn = True;
+}
+if (SatanTurn && SatanDead){
+    SatanTurn = False;
+    BelzeTurn = True;
+}
+if (BelzeTurn && BelzeDead){
+    BelzeTurn = False;
+    BobTurn = True;
+}
+if (BobTurn && BobDead){
+    BobTurn = False;
+    EnnemyLTurn = True;
+}
+if (EnnemyLTurn && EnnemyLDead){
+    EnnemyLTurn = False;
+    EnnemyMTurn = True;
+}
+if (EnnemyMTurn && EnnemyMDead){
+    EnnemyMTurn = False;
+    EnnemyRTurn = True;
+}
+if (EnnemyRTurn && EnnemyRDead){
+    EnnemyRTurn = False;
+    LuciferTurn = True;
+}
+
+
 
 //SPECIALES : 
 //LUCIFER - VENT D'EDEN : Soigne le coéquipier le plus affaibli.
